@@ -17,7 +17,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-champagne-200/60 bg-white/80 backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full border-b border-white/35 bg-white/35 shadow-[0_8px_32px_rgba(31,38,135,0.12)] backdrop-blur-xl">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="font-serif text-2xl font-bold text-charcoal-900">
           Luxe<span className="text-champagne-500">Beauty</span>
@@ -46,7 +46,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="border-t border-champagne-200/60 bg-white md:hidden">
+        <div className="border-t border-white/35 bg-white/30 backdrop-blur-xl md:hidden">
           <nav className="flex flex-col px-4 py-4">
             {links.map((link) => (
               <Link key={link.href} href={link.href} className="py-3 text-base font-medium text-charcoal-700" onClick={() => setOpen(false)}>

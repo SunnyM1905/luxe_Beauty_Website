@@ -8,7 +8,17 @@ export default function Home() {
     <div>
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1600&q=80" alt="Salon interior" fill className="object-cover" priority />
+          <video
+            className="h-full w-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1600&q=80"
+            aria-hidden="true"
+          >
+            <source src="/background-video.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
