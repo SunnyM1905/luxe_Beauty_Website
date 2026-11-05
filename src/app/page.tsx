@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Star, Calendar } from 'lucide-react';
 import { services, staff, reviews, offers, gallery } from '@/lib/mock-data';
+import { formatCurrency } from '@/lib/currency';
 
 export default function Home() {
   return (
@@ -55,7 +56,7 @@ export default function Home() {
               <Link key={service.id} href={`/services#${service.id}`} className="card group">
                 <div className="relative h-48 rounded-xl overflow-hidden mb-4">
                   <Image src={service.image} alt={service.name} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
-                  <div className="absolute top-3 right-3 bg-secondary text-foreground text-xs font-bold px-2 py-1 rounded-full">${service.price}</div>
+                  <div className="absolute top-3 right-3 bg-secondary text-foreground text-xs font-bold px-2 py-1 rounded-full">{formatCurrency(service.price)}</div>
                 </div>
                 <h3 className="font-serif text-xl font-semibold mb-2">{service.name}</h3>
                 <p className="text-muted text-sm mb-3">{service.description}</p>
@@ -82,16 +83,16 @@ export default function Home() {
             {[
               { name: 'Bridal Bliss', desc: 'Complete bridal hair, makeup & trial', price: 450, orig: 520, img: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80' },
               { name: 'Glow Getter', desc: 'Facial, hair spa & massage', price: 250, orig: 290, img: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80' },
-              { name: 'Nail & Glow', desc: 'Gel manicure with party makeup', price: 130, orig: 140, img: 'https://images.unsplash.com/photo-1604654894610-df63b6a9b088?w=600&q=80' },
+              { name: 'Nail & Glow', desc: 'Gel manicure with party makeup', price: 130, orig: 140, img: 'https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=600&q=80' },
             ].map(pkg => (
               <div key={pkg.name} className="card relative overflow-hidden">
-                <div className="absolute top-4 right-4 bg-secondary text-foreground text-xs font-bold px-2 py-1 rounded-full">Save ${pkg.orig - pkg.price}</div>
+                <div className="absolute top-4 right-4 bg-secondary text-foreground text-xs font-bold px-2 py-1 rounded-full">Save {formatCurrency(pkg.orig - pkg.price)}</div>
                 <div className="h-48 rounded-xl overflow-hidden mb-4"><Image src={pkg.img} alt={pkg.name} width={400} height={300} className="w-full h-full object-cover" /></div>
                 <h3 className="font-serif text-2xl font-semibold mb-2">{pkg.name}</h3>
                 <p className="text-muted text-sm mb-4">{pkg.desc}</p>
                 <div className="flex items-end gap-2 mb-4">
-                  <span className="text-3xl font-bold text-primary">${pkg.price}</span>
-                  <span className="text-muted line-through text-sm mb-1">${pkg.orig}</span>
+                  <span className="text-3xl font-bold text-primary">{formatCurrency(pkg.price)}</span>
+                  <span className="text-muted line-through text-sm mb-1">{formatCurrency(pkg.orig)}</span>
                 </div>
                 <Link href="/booking" className="btn-primary w-full text-center block">Book Package</Link>
               </div>

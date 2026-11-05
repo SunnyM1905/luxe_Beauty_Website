@@ -6,6 +6,7 @@ import { Search } from 'lucide-react';
 import { services } from '@/lib/mock-data';
 import Link from 'next/link';
 import { Calendar } from 'lucide-react';
+import { formatCurrency } from '@/lib/currency';
 
 const categories = ['All', 'Hair', 'Skin', 'Nails', 'Makeup', 'Bridal', 'Spa', 'Waxing', 'Threading'] as const;
 
@@ -47,7 +48,7 @@ export default function ServicesPage() {
               </div>
               <div className="flex items-start justify-between mb-2">
                 <h3 className="font-serif text-2xl font-semibold">{service.name}</h3>
-                <span className="bg-secondary/20 text-foreground px-3 py-1 rounded-full font-bold">${service.price}</span>
+                <span className="bg-secondary/20 text-foreground px-3 py-1 rounded-full font-bold">{formatCurrency(service.price)}</span>
               </div>
               <span className="inline-block bg-blush-100 text-primary text-xs font-medium px-2 py-1 rounded-full mb-3">{service.category}</span>
               <p className="text-muted text-sm mb-4">{service.description}</p>

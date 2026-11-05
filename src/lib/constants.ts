@@ -1,9 +1,9 @@
 export const services = [
   { id: "s1", name: "Haircut & Blowdry", category: "Hair", description: "Precision cut with a luxurious blowdry finish.", duration: 45, price: 65, image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80", popular: true },
   { id: "s2", name: "Full Color & Highlights", category: "Hair", description: "Full color service with dimension highlights.", duration: 120, price: 150, image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80", popular: true },
-  { id: "s3", name: "Bridal Hair & Makeup", category: "Bridal", description: "Complete bridal styling for your special day.", duration: 180, price: 350, image: "https://images.unsplash.com/photo-1516975087454-2f9f76f24e3c?w=600&q=80", popular: true },
+  { id: "s3", name: "Bridal Hair & Makeup", category: "Bridal", description: "Complete bridal styling for your special day.", duration: 180, price: 350, image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80", popular: true },
   { id: "s4", name: "Signature Facial", category: "Skin", description: "Deep cleansing and rejuvenating facial.", duration: 60, price: 95, image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80", popular: true },
-  { id: "s5", name: "Gel Manicure", category: "Nails", description: "Long-lasting gel polish with nail art.", duration: 45, price: 55, image: "https://images.unsplash.com/photo-1604654894610-df63b6a9b088?w=600&q=80" },
+  { id: "s5", name: "Gel Manicure", category: "Nails", description: "Long-lasting gel polish with nail art.", duration: 45, price: 55, image: "https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=600&q=80" },
   { id: "s6", name: "Swedish Massage", category: "Spa", description: "Relaxing full-body massage therapy.", duration: 60, price: 110, image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80" },
   { id: "s7", name: "Threading & Brows", category: "Threading", description: "Precision eyebrow threading and shaping.", duration: 20, price: 25, image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80" },
   { id: "s8", name: "Full Body Wax", category: "Waxing", description: "Smooth, silky skin with premium wax.", duration: 90, price: 120, image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&q=80" },
@@ -35,8 +35,8 @@ export const staff = [
 export const gallery = [
   { id: "g1", category: "hair", image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80", caption: "Modern haircut", src: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80", alt: "Modern haircut" },
   { id: "g2", category: "skin", image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80", caption: "Relaxing facial", src: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80", alt: "Relaxing facial" },
-  { id: "g3", category: "nails", image: "https://images.unsplash.com/photo-1604654894610-df63b6a9b088?w=600&q=80", caption: "Gel manicure", src: "https://images.unsplash.com/photo-1604654894610-df63b6a9b088?w=600&q=80", alt: "Gel manicure" },
-  { id: "g4", category: "bridal", image: "https://images.unsplash.com/photo-1516975087454-2f9f76f24e3c?w=600&q=80", caption: "Bridal makeup", src: "https://images.unsplash.com/photo-1516975087454-2f9f76f24e3c?w=600&q=80", alt: "Bridal makeup" },
+  { id: "g3", category: "nails", image: "https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=600&q=80", caption: "Gel manicure", src: "https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=600&q=80", alt: "Gel manicure" },
+  { id: "g4", category: "bridal", image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80", caption: "Bridal makeup", src: "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80", alt: "Bridal makeup" },
   { id: "g5", category: "spa", image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80", caption: "Massage therapy", src: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80", alt: "Massage therapy" },
   { id: "g6", category: "makeup", image: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80", caption: "Evening makeup", src: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80", alt: "Evening makeup" },
   { id: "g7", category: "waxing", image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&q=80", caption: "Waxing service", src: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&q=80", alt: "Waxing service" },
@@ -65,6 +65,6 @@ export const clients = [
 
 export const offers = [
   { id: "o1", title: "First Visit Special", description: "Get 20% off your first visit. New clients only.", code: "LUXE20", discount: "20%", expires: "Dec 31, 2025" },
-  { id: "o2", title: "Bridal Package", description: "Book our complete bridal package and save $100.", code: "BRIDAL100", discount: "$100", expires: "Jun 30, 2025" },
+  { id: "o2", title: "Bridal Package", description: "Book our complete bridal package and save ₹100.", code: "BRIDAL100", discount: "₹100", expires: "Jun 30, 2025" },
   { id: "o3", title: "Spring Spa Deal", description: "15% off all spa treatments this spring.", code: "SPRING15", discount: "15%", expires: "May 31, 2025" },
 ];

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { Search } from 'lucide-react';
 import { bookings } from '@/lib/mock-data';
+import { formatCurrency } from '@/lib/currency';
 
 export default function AdminBookings() {
   const [filter, setFilter] = useState('all');
@@ -53,7 +54,7 @@ export default function AdminBookings() {
                   <td className="py-3 px-4 text-sm">{booking.serviceName}</td>
                   <td className="py-3 px-4 text-sm">{new Date(booking.date).toLocaleDateString()}</td>
                   <td className="py-3 px-4 text-sm">{booking.time}</td>
-                  <td className="py-3 px-4 text-sm font-medium">${booking.total}</td>
+                  <td className="py-3 px-4 text-sm font-medium">{formatCurrency(booking.total)}</td>
                   <td className="py-3 px-4">
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${booking.status === 'confirmed' ? 'bg-green-100 text-green-700' : booking.status === 'pending' ? 'bg-orange-100 text-orange-700' : booking.status === 'cancelled' ? 'bg-red-100 text-red-700' : 'bg-gray-100 text-gray-700'}`}>{booking.status}</span>
                   </td>

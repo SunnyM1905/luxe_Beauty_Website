@@ -2,6 +2,7 @@
 
 import { Calendar, Users, DollarSign, TrendingUp, AlertCircle } from 'lucide-react';
 import { bookings } from '@/lib/mock-data';
+import { formatCurrency } from '@/lib/currency';
 import Link from 'next/link';
 
 export default function AdminDashboard() {
@@ -29,7 +30,7 @@ export default function AdminDashboard() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-muted text-sm">Total Revenue</p>
-                <p className="text-3xl font-bold mt-1">${totalRevenue}</p>
+                <p className="text-3xl font-bold mt-1">{formatCurrency(totalRevenue)}</p>
               </div>
               <DollarSign className="w-10 h-10 text-secondary" />
             </div>

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { Plus, Edit, Trash2 } from 'lucide-react';
 import { services as mockServices } from '@/lib/mock-data';
+import { formatCurrency } from '@/lib/currency';
 
 export default function AdminServices() {
   const [services, setServices] = useState(mockServices);
@@ -37,7 +38,7 @@ export default function AdminServices() {
               </div>
               <div className="flex items-start justify-between mb-2">
                 <h3 className="font-serif text-xl font-semibold">{service.name}</h3>
-                <span className="font-bold text-primary">${service.price}</span>
+                <span className="font-bold text-primary">{formatCurrency(service.price)}</span>
               </div>
               <p className="text-muted text-sm mb-3">{service.description}</p>
               <div className="flex items-center justify-between text-sm text-muted mb-4">

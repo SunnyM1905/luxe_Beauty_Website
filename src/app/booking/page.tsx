@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { ChevronRight, Check, Calendar } from "lucide-react";
 import { services, staff } from "@/lib/constants";
+import { formatCurrency } from "@/lib/currency";
 
 const steps = ["Service", "Stylist", "Date & Time", "Details", "Confirm"];
 
@@ -47,7 +48,7 @@ export default function BookingPage() {
               <div className="flex justify-between"><span className="text-muted">Date:</span><span className="font-medium">{new Date(date).toLocaleDateString()}</span></div>
               <div className="flex justify-between"><span className="text-muted">Time:</span><span className="font-medium">{time}</span></div>
               <div className="flex justify-between"><span className="text-muted">Duration:</span><span className="font-medium">{selectedService!.duration} min</span></div>
-              <div className="flex justify-between border-t border-border pt-2 mt-2"><span className="text-muted">Total:</span><span className="font-bold text-primary">${selectedService!.price}</span></div>
+              <div className="flex justify-between border-t border-border pt-2 mt-2"><span className="text-muted">Total:</span><span className="font-bold text-primary">{formatCurrency(selectedService!.price)}</span></div>
             </div>
           </div>
           <a href="/" className="btn-primary inline-flex items-center gap-2">Back to Home</a>
@@ -89,7 +90,7 @@ export default function BookingPage() {
                         <h3 className="font-semibold">{service.name}</h3>
                         <p className="text-muted text-sm">{service.duration} min</p>
                       </div>
-                      <span className="font-bold text-primary">${service.price}</span>
+                      <span className="font-bold text-primary">{formatCurrency(service.price)}</span>
                     </div>
                   </div>
                 ))}
@@ -192,7 +193,7 @@ export default function BookingPage() {
                 </div>
                 <div className="flex justify-between items-center p-4 border border-border rounded-xl">
                   <span className="text-muted">Total</span>
-                  <span className="text-2xl font-bold text-primary">${selectedService!.price}</span>
+                  <span className="text-2xl font-bold text-primary">{formatCurrency(selectedService!.price)}</span>
                 </div>
                 <p className="text-xs text-muted">By booking, you agree to our cancellation policy. Free cancellation up to 24 hours before your appointment.</p>
               </div>

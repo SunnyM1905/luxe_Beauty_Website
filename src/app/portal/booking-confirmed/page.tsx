@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { Check, Calendar, Download, Share2 } from 'lucide-react';
+import { formatCurrency } from '@/lib/currency';
 
 export default function BookingConfirmed() {
   return (
@@ -21,7 +22,7 @@ export default function BookingConfirmed() {
             <div className="flex justify-between"><span className="text-muted">Stylist:</span><span className="font-medium">Sophie Chen</span></div>
             <div className="flex justify-between"><span className="text-muted">Date:</span><span className="font-medium">Nov 15, 2025</span></div>
             <div className="flex justify-between"><span className="text-muted">Time:</span><span className="font-medium">2:00 PM</span></div>
-            <div className="flex justify-between border-t border-border pt-2 mt-2"><span className="text-muted">Total:</span><span className="font-bold text-primary">$95.00</span></div>
+            <div className="flex justify-between border-t border-border pt-2 mt-2"><span className="text-muted">Total:</span><span className="font-bold text-primary">{formatCurrency(95)}</span></div>
           </div>
         </div>
 
